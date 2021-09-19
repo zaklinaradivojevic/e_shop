@@ -19,6 +19,8 @@ mongoose
         console.log(error);
     });
 
+app.use("/api/users", userRoute);
+
 
 
 app.listen(5001, () => {
