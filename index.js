@@ -18,11 +18,12 @@ mongoose
     .catch((error) => {
         console.log(error);
     });
-
+    
+app.use(express.json());
 app.use("/api/users", userRoute);
 
 
 
 app.listen(5001, () => {
-    console.log('Server is runnong');
+    console.log('Server is runnong', 'http://localhost:5001');
 })
