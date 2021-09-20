@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const OrderShema = new mongoose.Schema(
+const CartShema = new mongoose.Schema(
     {
         userId: { type: String, required: true },
         products: [
@@ -14,10 +14,7 @@ const OrderShema = new mongoose.Schema(
                 }
             },
         ],
-        amount:{type:Number,required:true},
-        address:{type:Object,required:true},
-        status:{type:String,default:"pending"},
     }, { timestamps: true }
 );
 
-module.exports = mongoose.model("Order", OrderShema);
+module.exports = mongoose.model("Cart", CartShema);

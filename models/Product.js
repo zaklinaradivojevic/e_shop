@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
-const { boolean } = require(webidl - conversions);
 
 const ProductShema = new mongoose.Schema(
     {
         title: { type: String, required: true, unique: true },
         desc: { type: String, required: true, unique: true },
         img: { type: String, required: true },
+        categories: { type: Arrey },
+        size: { type: String },
+        color: { type: String },
+        price: { type: Number, required: true },
     }, { timestamps: true }
 );
 
